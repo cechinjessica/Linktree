@@ -22,7 +22,7 @@ jobs:
         run: dotnet restore
 
       - name: Publish Blazor project
-        run: dotnet publish Linktree/Linktree.csproj --configuration Release --output build_output
+        run: dotnet publish --configuration Release --output build_output
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
