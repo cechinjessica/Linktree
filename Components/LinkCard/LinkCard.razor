@@ -1,0 +1,104 @@
+@using Linktree.Models;
+
+<a href="@Link.Url" class="link-button @Link.GradientCss" target="_blank" rel="noopener noreferrer">
+
+    @if (!string.IsNullOrEmpty(Link.BackgroundIconClass))
+    {
+        <i class="background-icon @Link.BackgroundIconClass"></i>
+    }
+
+    <div class="link-content">
+        <div class="link-icon link-tag">
+            <i class="@Link.IconClass"></i>
+        </div>
+        <div class="link-text">
+            <strong>@Link.Title</strong>
+            <span>@Link.Subtitle</span>
+        </div>
+    </div>
+
+    @if (!string.IsNullOrEmpty(Link.Tag))
+    {
+        <div class="link-tag">@Link.Tag</div>
+    }
+</a>
+
+<style>
+    .links-section .link-button {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px;
+        margin-bottom: 15px;
+        border-radius: 10px;
+        color: white;
+        text-decoration: none;
+        transition: transform 0.2s ease-in-out;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .links-section .link-button:hover {
+        transform: scale(1.02);
+    }
+
+    .link-content {
+        display: flex;
+        align-items: center;
+    }
+
+    .link-icon {
+        font-size: 1.5rem;
+        margin-right: 15px;
+    }
+
+    .link-text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .link-text strong {
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    .link-text span {
+        font-size: 0.85rem;
+    }
+
+    .link-tag {
+        padding: 5px 10px;
+        border-radius: 8px;
+        font-size: 0.75rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        background-color: rgba(255, 255, 255, 0.18);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .link-icon.link-tag {
+        font-size: larger;
+    }
+
+    .background-icon {
+        position: absolute;
+        right: 10px;
+        bottom: -10px;
+        font-size: 100px;
+        color: rgba(255, 255, 255, 0.15);
+        transform: none;
+        z-index: 0;
+    }
+
+    .link-content,
+    .link-tag {
+        position: relative;
+        z-index: 1;
+    }
+</style>
+
+@code {
+    [Parameter]
+    public LinkModel Link { get; set; } = new LinkModel();
+}

@@ -1,0 +1,17 @@
+# gitigore for blazor project
+
+# Visual Studio Code
+.vscode/
+
+# Visual Studio
+.vs/
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+[Aa][Rr][Mm]/
+[Bb][Uu][Ii][Ll]/
+[Bb][Uu][Ii][Ll]_[Aa][Rr][Mm]/
+[Bb][Uu][Ii][Ll]_[Xx][Aa][Rr][
+

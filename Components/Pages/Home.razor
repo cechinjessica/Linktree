@@ -1,0 +1,126 @@
+﻿@page "/"
+@using Linktree.Components.LinkCard
+@using Linktree.Models
+
+<div class="linktree-container">
+    <div class="text-center profile-container">
+        <img src="/img/profile.jpg" class="profile-picture" alt="Foto de Perfil de Jéssica Cechin" />
+        <div class="status-badge">
+            ✨Disponível
+        </div>
+    </div>
+    <h2 class="text-center mt-3">Jéssica Cechin</h2>
+
+
+    <div class="mt-3 info-section">
+        <p>👩🏻‍💻 Desenvolvedora de Software</p>
+        <p>🧘🏻‍♀️ Instrutora de Yoga</p>
+        <p>💡 Criadora UGC</p>
+    </div>
+
+    <div class="mt-3 description text-center">
+        <p>Transformando ideias em código e conectando corpo e mente através da yoga. Vamos criar algo incrível
+            juntos!🚀</p>
+    </div>
+
+    <div class="links-section">
+        @foreach (var link in links)
+        {
+            <LinkCard Link="link" />
+        }
+    </div>
+
+    <div class="social-connect-card">
+        <h3 class="social-title">Conecte-se comigo</h3>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/jessica.cechin/" target="_blank" rel="noopener noreferrer"
+                aria-label="Instagram">
+                <i class="bi bi-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/jessicacechin/" target="_blank" rel="noopener noreferrer"
+                aria-label="LinkedIn">
+                <i class="bi bi-linkedin"></i>
+            </a>
+            <a href="https://github.com/cechinjessica" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <i class="bi bi-github"></i>
+            </a>
+            <a href="https://www.youtube.com/@@jessica.cechin" target="_blank" rel="noopener noreferrer"
+                aria-label="YouTube">
+                <i class="bi bi-youtube"></i>
+            </a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© @DateTime.Now.Year <a href="https://jessicacechin.com" target="_blank" rel="noopener noreferrer">Jéssica
+                Cechin</a>. Todos os direitos reservados.</p>
+        <p>Feito com 💜 e muito código</p>
+    </footer>
+</div>
+
+@code {
+    private List<LinkModel> links = new List<LinkModel>
+{
+new LinkModel
+{
+Url = "https://jessicacechin.com",
+IconClass = "bi bi-code",
+Title = "Contrate meus Serviços como Programadora",
+Subtitle = "Transformo suas ideias em soluções digitais que encantam",
+Tag = "Desenvolvimento",
+GradientCss = "gradient-purple",
+BackgroundIconClass = "bi bi-code"
+},
+new LinkModel
+{
+Url = "https://wa.me/5554996530825?text=Olá%20!%20Gostaria%20de%20propor%20uma%20parceria%20com%20você.",
+IconClass = "bi bi-whatsapp",
+Title = "Parcerias",
+Subtitle = "Vamos criar conteúdo incrível juntos!",
+Tag = "WhatsApp",
+GradientCss = "gradient-green",
+BackgroundIconClass = "bi bi-whatsapp"
+},
+new LinkModel
+{
+Url = "https://drive.google.com/file/d/1w1U-l5ypi3CIo3Qn_jY56n0bFESI-WFl/view?usp=sharing",
+IconClass = "bi bi-camera",
+Title = "Composite de Modelo",
+Subtitle = "Confira meu \"currículo\" para trabalhos como modelo",
+Tag = "Portfolio",
+GradientCss = "gradient-blue",
+BackgroundIconClass = "bi bi-camera"
+},
+/*new LinkModel
+{
+Url = "https://seulink.com/midia-kit",
+IconClass = "bi bi-file-earmark-bar-graph",
+Title = "Mídia Kit",
+Subtitle = "Dados, estatísticas e informações para parcerias",
+Tag = "Marketing",
+GradientCss = "gradient-orange",
+BackgroundIconClass = "bi bi-graph-up-arrow"
+},
+*/
+new LinkModel
+{
+Url = "https://wa.me/5554996530825?text=Olá%20!%20Gostaria%20de%20agendar%20uma%20prática%20de%20yoga%20com%20você.",
+IconClass = "bi bi-calendar-heart-fill",
+Title = "Agende uma Prática de Yoga",
+Subtitle = "Encontre equilíbrio e bem-estar comigo",
+Tag = "Yoga",
+GradientCss = "gradient-teal",
+BackgroundIconClass = "bi bi-calendar-heart-fill"
+},
+new LinkModel
+{
+Url = "https://youtu.be/SV1p0z8wl2c?si=Xy1tKblM-TkZc3_w",
+IconClass = "bi bi-youtube",
+Title = "Playlist de Yoga no YouTube",
+Subtitle = "Práticas curtas de yoga, onde e quando quiser",
+Tag = "YouTube",
+GradientCss = "gradient-red",
+BackgroundIconClass="bi bi-youtube"
+}
+};
+}
