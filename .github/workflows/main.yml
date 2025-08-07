@@ -24,6 +24,11 @@ jobs:
       - name: Publish Blazor project
         run: dotnet publish --configuration Release --output build_output
 
+      # Passo adicionado para criar o arquivo 404.html
+      - name: Create 404.html
+        run: |
+          echo '<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="refresh" content="0;URL=/Linktree"></head><body><h1>Redirecionando...</h1></body></html>' > build_output/wwwroot/404.html
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
