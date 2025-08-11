@@ -2198,6 +2198,7 @@
       "packagesPath": "/Users/jessica.cechin/.nuget/packages/",
       "outputPath": "/Users/jessica.cechin/Documents/Projects/Linktree/obj/",
       "projectStyle": "PackageReference",
+      "centralPackageVersionsManagementEnabled": true,
       "configFilePaths": [
         "/Users/jessica.cechin/.nuget/NuGet/NuGet.Config"
       ],
@@ -2232,20 +2233,24 @@
         "dependencies": {
           "BlazorStrap": {
             "target": "Package",
-            "version": "[5.2.104, )"
+            "version": "[5.2.104, )",
+            "versionCentrallyManaged": true
           },
           "BlazorStrap.V5": {
             "target": "Package",
-            "version": "[5.2.104, )"
+            "version": "[5.2.104, )",
+            "versionCentrallyManaged": true
           },
           "Microsoft.AspNetCore.Components.WebAssembly": {
             "target": "Package",
-            "version": "[8.0.0, )"
+            "version": "[8.0.0, )",
+            "versionCentrallyManaged": true
           },
           "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[8.0.0, )"
+            "version": "[8.0.0, )",
+            "versionCentrallyManaged": true
           },
           "Microsoft.NET.ILLink.Tasks": {
             "suppressParent": "All",
@@ -2259,6 +2264,12 @@
             "version": "[9.0.6, )",
             "autoReferenced": true
           }
+        },
+        "centralPackageVersions": {
+          "BlazorStrap": "5.2.104",
+          "BlazorStrap.V5": "5.2.104",
+          "Microsoft.AspNetCore.Components.WebAssembly": "8.0.0",
+          "Microsoft.AspNetCore.Components.WebAssembly.DevServer": "8.0.0"
         },
         "imports": [
           "net461",
