@@ -79,12 +79,17 @@ a {
 .gradient-orange {
   background: linear-gradient(100deg, #eb9b59, #e76140);
 }
+
 .gradient-teal {
   background: linear-gradient(100deg, #2cc9c2, #1ea6d8);
 }
 
 .gradient-red {
   background: linear-gradient(100deg, #d34553, #de192c);
+}
+
+.gradient-gold {
+  background: linear-gradient(100deg, #f8bf33, #e99c05);
 }
 
 .social-connect-card {
