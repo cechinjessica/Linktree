@@ -3,17 +3,20 @@
 Página de links do Instagram [@jessica.cechin](https://www.instagram.com/jessica.cechin/) —
 publicada em [linktree.jessicacechin.com](https://linktree.jessicacechin.com).
 
-HTML estático, sem build. Todo o site vive em `public/`:
+HTML estático, sem build e sem JavaScript. Todo o site vive em `public/`:
 
 ```
 public/
-  index.html   página única (estilos inline, sem JS)
-  404.html     redireciona para /
-  img/         avatar e imagem de compartilhamento (Open Graph)
+  index.html    página única, estilos inline
+  404.html      redireciona para /
+  robots.txt    libera indexação e aponta o sitemap
+  sitemap.xml
+  img/          avatar e imagem de compartilhamento (Open Graph)
 ```
 
-Editar = abrir `public/index.html`. O deploy é automático no push para `main`
-(GitHub Actions → CloudFlare Pages, ver `.github/workflows/deploy.yml`).
+Editar = abrir `public/index.html`. O deploy é automático: o CloudFlare Pages
+está conectado direto a este repositório e publica `public/` a cada push na
+`main`.
 
-> A versão anterior era um app Blazor WebAssembly. Os arquivos continuam no
-> repositório mas não são mais publicados — o histórico está no commit `8cfa7d2`.
+> Até setembro de 2026 isto era um app Blazor WebAssembly, publicado por um
+> GitHub Action. O histórico está no commit `8cfa7d2`.
